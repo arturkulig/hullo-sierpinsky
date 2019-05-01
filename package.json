@@ -8,7 +8,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "parcel src/main.html",
     "dev": "parcel src/main.html",
-    "postinstall": "parcel build src/main.html"
+    "build": "parcel build src/main.html"
   },
   "author": "",
   "license": "ISC",
