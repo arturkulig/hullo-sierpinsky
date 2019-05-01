@@ -144,9 +144,7 @@ function endless() {
 }
 
 declare global {
-  interface NodeModule {
-    hot: any;
-  }
+  const module: any;
 }
 
 if ("hot" in module && module.hot) {
