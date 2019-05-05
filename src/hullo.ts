@@ -120,7 +120,7 @@ function Dot(data: {
       background: hover$.pipe(map(hover => (hover ? "#ff0" : "#61dafb")))
     },
     props: {
-      innerText: combineLatest<[boolean, string]>([hover$, data.text]).pipe(
+      textContent: combineLatest<[boolean, string]>([hover$, data.text]).pipe(
         map(([hover = false, text = ""]) => (hover ? `*${text}*` : text))
       )
     }
