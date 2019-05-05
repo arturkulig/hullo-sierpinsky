@@ -32,7 +32,7 @@ function App() {
           (): string => {
             const t = ((Date.now() - startTime) / 1000) % 10;
             const scale = 1 + (t > 5 ? 10 - t : t) / 10;
-            return `scaleX(${scale / 2.5}) scaleY(0.7) translateZ(0.1px)`;
+            return `scaleX(${scale / 2.1}) scaleY(0.7) translateZ(0.1px)`;
           }
         )
       )
@@ -111,12 +111,12 @@ function Dot(data: {
       font: "normal 15px sans-serif",
       textAlign: "center",
       cursor: "pointer",
-      width: `${data.size}px`,
-      height: `${data.size}px`,
+      width: `${data.size * 1.3}px`,
+      height: `${data.size * 1.3}px`,
       left: `${data.x}px`,
       top: `${data.y}px`,
-      borderRadius: `${data.size / 2}px`,
-      lineHeight: `${data.size}px`,
+      borderRadius: `${(data.size * 1.3) / 2}px`,
+      lineHeight: `${data.size * 1.3}px`,
       background: hover$.pipe(map(hover => (hover ? "#ff0" : "#61dafb")))
     },
     props: {
